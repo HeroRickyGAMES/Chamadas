@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196992086604",
+    "project_id": "chamadas-c4d20",
+    "storage_bucket": "chamadas-c4d20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196992086604:android:17c9cd4dcb6cb60e21bae9",
+        "android_client_info": {
+          "package_name": "com.herorickystudios.chamadas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196992086604-3hpbal2kc2nkn8gkc7jsoldtdah6sii8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSxSbIgUwmo-dDV7bkO1B5rvIgvloFBac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196992086604-3hpbal2kc2nkn8gkc7jsoldtdah6sii8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
