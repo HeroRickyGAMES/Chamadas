@@ -25,8 +25,20 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_baseline_check_24"
+        android:onClick="Btnpresenca2"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/buttonPresenca" />
+
+    <Button
+        android:id="@+id/buttonPresenca2"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_check_24"
+        android:onClick="Btnpresenca3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPresenca1" />
 
     <TextView
         android:id="@+id/nomesStactText"
@@ -59,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:text="Aluno 2"
+        android:text="Place Holder2"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.508"
@@ -67,12 +79,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textAluno" />
 
     <TextView
+        android:id="@+id/textAluno3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:text="Place Holder3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAluno2" />
+
+    <TextView
         android:id="@+id/textAluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
-        android:text="Aluno 1"
+        android:text="Place Holder1"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,8 +119,19 @@
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/ic_baseline_close_24"
+        android:onClick="faltasbtn2"
         app:layout_constraintStart_toEndOf="@+id/buttonPresenca1"
         app:layout_constraintTop_toBottomOf="@+id/buttonFalta" />
+
+    <Button
+        android:id="@+id/buttonFalta2"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_close_24"
+        android:onClick="faltasbtn3"
+        app:layout_constraintStart_toEndOf="@+id/buttonPresenca2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFalta1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -133,6 +169,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textPresenca" />
 
     <EditText
+        android:id="@+id/textPresenca3"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonFalta2"
+        app:layout_constraintTop_toBottomOf="@+id/textPresenca2" />
+
+    <EditText
         android:id="@+id/textFaltas"
         android:layout_width="37dp"
         android:layout_height="31dp"
@@ -145,6 +195,20 @@
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textPresenca"
         app:layout_constraintTop_toBottomOf="@+id/StatctextFaltas" />
+
+    <EditText
+        android:id="@+id/textFaltas3"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textPresenca3"
+        app:layout_constraintTop_toBottomOf="@+id/textFaltas2" />
 
     <EditText
         android:id="@+id/textFaltas2"
