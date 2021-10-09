@@ -104,21 +104,22 @@
         android:id="@+id/textPresenças"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
         android:layout_marginEnd="16dp"
         android:text="Presenças"
         app:layout_constraintEnd_toStartOf="@+id/StatctextFaltas"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textAluno2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder2"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno" />
 
@@ -126,11 +127,11 @@
         android:id="@+id/textAluno4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder4"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno3" />
 
@@ -138,11 +139,11 @@
         android:id="@+id/textAluno5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder5"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno4" />
 
@@ -150,11 +151,11 @@
         android:id="@+id/textAluno6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder6"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno5" />
 
@@ -162,11 +163,11 @@
         android:id="@+id/textAluno3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder3"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno2" />
 
@@ -174,13 +175,13 @@
         android:id="@+id/textAluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
         android:text="Place Holder1"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomesStactText" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <Button
         android:id="@+id/buttonFalta"
@@ -255,11 +256,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta"
         app:layout_constraintTop_toBottomOf="@+id/textPresenças" />
 
@@ -269,11 +272,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas2"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta1"
         app:layout_constraintTop_toBottomOf="@+id/textPresenca" />
 
@@ -283,11 +288,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas3"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta2"
         app:layout_constraintTop_toBottomOf="@+id/textPresenca2" />
 
@@ -297,11 +304,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas4"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta4"
         app:layout_constraintTop_toBottomOf="@+id/textPresenca3" />
 
@@ -311,11 +320,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas5"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta5"
         app:layout_constraintTop_toBottomOf="@+id/textPresenca5" />
 
@@ -325,11 +336,13 @@
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas6"
         app:layout_constraintStart_toEndOf="@+id/buttonFalta6"
         app:layout_constraintTop_toBottomOf="@+id/textPresenca4" />
 
@@ -337,7 +350,6 @@
         android:id="@+id/textFaltas"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -345,14 +357,12 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca"
         app:layout_constraintTop_toBottomOf="@+id/StatctextFaltas" />
 
     <EditText
         android:id="@+id/textFaltas3"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -360,14 +370,12 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca3"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas2" />
 
     <EditText
         android:id="@+id/textFaltas4"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -375,14 +383,12 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca5"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas3" />
 
     <EditText
         android:id="@+id/textFaltas5"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -390,14 +396,12 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca4"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas4" />
 
     <EditText
         android:id="@+id/textFaltas6"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -405,14 +409,12 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca6"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas5" />
 
     <EditText
         android:id="@+id/textFaltas2"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
@@ -420,7 +422,13 @@
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPresenca2"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

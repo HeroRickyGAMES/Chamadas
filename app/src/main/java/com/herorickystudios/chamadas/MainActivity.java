@@ -1,5 +1,7 @@
 package com.herorickystudios.chamadas;
 
+//PROGRAMADO POR  HERORICKY_GAMES!
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
