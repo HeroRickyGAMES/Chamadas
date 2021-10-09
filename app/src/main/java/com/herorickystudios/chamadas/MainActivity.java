@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference referencia2 = FirebaseDatabase.getInstance().getReference("Aluno2");
     private DatabaseReference referencia3 = FirebaseDatabase.getInstance().getReference("Aluno3");
     private DatabaseReference referencia4 = FirebaseDatabase.getInstance().getReference("Aluno4");
+    private DatabaseReference referencia5 = FirebaseDatabase.getInstance().getReference("Aluno5");
+    private DatabaseReference referencia6 = FirebaseDatabase.getInstance().getReference("Aluno6");
     private FirebaseDatabase database;
     private ValueEventListener valueEventListener;
     private EditText presencas,faltas;
     private TextView nome;
     private Button buttonPresenca,buttonFalta;
-    private TextView textAluno2, textAluno3, textAluno4;
-    private EditText textPresenca2, textFaltas2, textPresenca3, textFaltas3, textPresenca5, textFaltas4;
+    private TextView textAluno2, textAluno3, textAluno4, textAluno5, textAluno6;
+    private EditText textPresenca2, textFaltas2, textPresenca3, textFaltas3, textPresenca5, textFaltas4, textPresenca4, textFaltas5, textPresenca6, textFaltas6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
         textPresenca5 = findViewById(R.id.textPresenca5);
         textFaltas4 = findViewById(R.id.textFaltas4);
 
+        //ALUNO5
+        textAluno5 = findViewById(R.id.textAluno5);
+        textPresenca4 = findViewById(R.id.textPresenca4);
+        textFaltas5 = findViewById(R.id.textFaltas5);
+
+        //ALUNO6
+        textAluno6 = findViewById(R.id.textAluno6);
+        textPresenca6 = findViewById(R.id.textPresenca6);
+        textFaltas6 = findViewById(R.id.textFaltas6);
+
             //db
         database = FirebaseDatabase.getInstance();
 
@@ -67,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         ouvinte_2();
         ouvinte_3();
         ouvinte_4();
+        ouvinte_5();
+        ouvinte_6();
 
     }
 
@@ -134,11 +148,11 @@ public class MainActivity extends AppCompatActivity {
 
         referencia.child("Faltas").setValue(resultadof1);
 
-        if(resultadof1 > 9){
+        if(resultadof1 > 7){
 
             nome.setTextColor(Color.parseColor("#808000"));
 
-        }if(resultadof1 > 12){
+        }if(resultadof1 > 11){
 
             nome.setTextColor(Color.parseColor("#FF0000"));
         }
@@ -200,11 +214,11 @@ public class MainActivity extends AppCompatActivity {
 
         referencia2.child("Faltas").setValue(resultadof2);
 
-        if(resultadof2 > 9){
+        if(resultadof2 > 7){
 
             textAluno2.setTextColor(Color.parseColor("#808000"));
 
-        }if(resultadof2 > 12){
+        }if(resultadof2 > 11){
 
             textAluno2.setTextColor(Color.parseColor("#FF0000"));
         }
@@ -263,11 +277,11 @@ public class MainActivity extends AppCompatActivity {
 
         referencia3.child("Faltas").setValue(resultadof3);
 
-        if(resultadof3 > 9){
+        if(resultadof3 > 7){
 
             textAluno3.setTextColor(Color.parseColor("#808000"));
 
-        }if(resultadof3 > 12){
+        }if(resultadof3 > 11){
 
             textAluno3.setTextColor(Color.parseColor("#FF0000"));
         }
@@ -300,9 +314,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Btnpresenca4(View view){
 
-        textPresenca3.getText();
+        textPresenca5.getText();
 
-        Integer campoA = Integer.parseInt(textPresenca3.getText().toString());
+        Integer campoA = Integer.parseInt(textPresenca5.getText().toString());
         Integer campoB = Integer.valueOf(1);
 
         int resultado2 = campoA + campoB;
@@ -326,13 +340,141 @@ public class MainActivity extends AppCompatActivity {
 
         referencia4.child("Faltas").setValue(resultadof3);
 
-        if(resultadof3 > 9){
+        if(resultadof3 > 7){
 
             textAluno4.setTextColor(Color.parseColor("#808000"));
 
-        }if(resultadof3 > 12){
+        }if(resultadof3 > 11){
 
             textAluno4.setTextColor(Color.parseColor("#FF0000"));
+        }
+    }
+    //Ouvinte do Aluno 5
+    private void ouvinte_5(){
+        DatabaseReference reference = database.getReference().child("Aluno5");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("FIREBASE", snapshot.getValue().toString());
+
+                String name = snapshot.child("nome").getValue().toString();
+                String p4 = snapshot.child("Presenca").getValue().toString();
+                String f4 = snapshot.child("Faltas").getValue().toString();
+
+                textAluno5.setText(name);
+                textPresenca4.setText(p4);
+                textFaltas5.setText(f4);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
+            }
+        });
+
+    }
+    public void Btnpresenca5(View view){
+
+        textPresenca4.getText();
+
+        Integer campoA = Integer.parseInt(textPresenca4.getText().toString());
+        Integer campoB = Integer.valueOf(1);
+
+        int resultado2 = campoA + campoB;
+
+        textPresenca4.setText(String.valueOf(resultado2));
+
+
+        referencia5.child("Presenca").setValue(resultado2);
+
+    }
+
+    public void faltasbtn5(View view){
+
+        textFaltas5.getText();
+        Integer campoAf = Integer.parseInt(textFaltas5.getText().toString());
+        Integer campoBf = Integer.valueOf(1);
+
+        int resultadof3 = campoAf + campoBf;
+
+        textFaltas5.setText(String.valueOf(resultadof3));
+
+        referencia5.child("Faltas").setValue(resultadof3);
+
+        if(resultadof3 > 7){
+
+            textAluno5.setTextColor(Color.parseColor("#808000"));
+
+        }if(resultadof3 > 11){
+
+            textAluno5.setTextColor(Color.parseColor("#FF0000"));
+        }
+    }
+
+    //Ouvinte do Aluno 6
+    private void ouvinte_6(){
+        DatabaseReference reference = database.getReference().child("Aluno6");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("FIREBASE", snapshot.getValue().toString());
+
+                String name = snapshot.child("nome").getValue().toString();
+                String p4 = snapshot.child("Presenca").getValue().toString();
+                String f4 = snapshot.child("Faltas").getValue().toString();
+
+                textAluno6.setText(name);
+                textPresenca6.setText(p4);
+                textFaltas6.setText(f4);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
+            }
+        });
+
+    }
+
+    public void Btnpresenca6(View view){
+
+        textPresenca6.getText();
+
+        Integer campoA = Integer.parseInt(textPresenca6.getText().toString());
+        Integer campoB = Integer.valueOf(1);
+
+        int resultado2 = campoA + campoB;
+
+        textPresenca6.setText(String.valueOf(resultado2));
+
+
+        referencia6.child("Presenca").setValue(resultado2);
+
+    }
+
+    public void faltasbtn6(View view){
+
+        textFaltas6.getText();
+        Integer campoAf = Integer.parseInt(textFaltas6.getText().toString());
+        Integer campoBf = Integer.valueOf(1);
+
+        int resultadof3 = campoAf + campoBf;
+
+        textFaltas6.setText(String.valueOf(resultadof3));
+
+        referencia6.child("Faltas").setValue(resultadof3);
+
+        if(resultadof3 > 7){
+
+            textAluno6.setTextColor(Color.parseColor("#808000"));
+
+        }if(resultadof3 > 11){
+
+            textAluno6.setTextColor(Color.parseColor("#FF0000"));
         }
     }
 
