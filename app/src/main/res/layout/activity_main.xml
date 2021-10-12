@@ -84,6 +84,39 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/buttonPresenca6" />
 
+    <Button
+        android:id="@+id/buttonPresenca5"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_check_24"
+        android:onClick="Btnpresenca7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPresenca7" />
+
+    <Button
+        android:id="@+id/buttonPresenca8"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_check_24"
+        android:onClick="Btnpresenca8"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPresenca5" />
+
+    <Button
+        android:id="@+id/buttonPresenca9"
+        android:layout_width="42dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_check_24"
+        android:onClick="Btnpresenca9"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPresenca8" />
+
     <TextView
         android:id="@+id/nomesStactText"
         android:layout_width="wrap_content"
@@ -158,6 +191,46 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonPresenca7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAluno5" />
+
+    <TextView
+        android:id="@+id/textAluno7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        android:text="Place Holder7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAluno6" />
+
+    <TextView
+        android:id="@+id/textAluno8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Place Holder8"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAluno7" />
+
+    <TextView
+        android:id="@+id/textAluno9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Place Holder9"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPresenca9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAluno8" />
 
     <TextView
         android:id="@+id/textAluno3"
@@ -242,6 +315,36 @@
         android:onClick="faltasbtn6"
         app:layout_constraintStart_toEndOf="@+id/buttonPresenca7"
         app:layout_constraintTop_toBottomOf="@+id/buttonFalta5" />
+
+    <Button
+        android:id="@+id/buttonFalta3"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_close_24"
+        android:onClick="faltasbtn7"
+        app:layout_constraintStart_toEndOf="@+id/buttonPresenca5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFalta6" />
+
+    <Button
+        android:id="@+id/buttonFalta7"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_close_24"
+        android:onClick="faltasbtn8"
+        app:layout_constraintStart_toEndOf="@+id/buttonPresenca8"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFalta3" />
+
+    <Button
+        android:id="@+id/buttonFalta8"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_close_24"
+        android:onClick="faltasbtn9"
+        app:layout_constraintStart_toEndOf="@+id/buttonPresenca9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFalta7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -347,6 +450,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textPresenca4" />
 
     <EditText
+        android:id="@+id/textPresenca7"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas7"
+        app:layout_constraintStart_toEndOf="@+id/buttonFalta3"
+        app:layout_constraintTop_toBottomOf="@+id/textPresenca6" />
+
+    <EditText
         android:id="@+id/textFaltas"
         android:layout_width="37dp"
         android:layout_height="31dp"
@@ -410,6 +529,78 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFaltas5" />
+
+    <EditText
+        android:id="@+id/textFaltas7"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFaltas6" />
+
+    <EditText
+        android:id="@+id/textFaltas8"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFaltas7" />
+
+    <EditText
+        android:id="@+id/textFaltas9"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="21dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFaltas8" />
+
+    <EditText
+        android:id="@+id/textPresenca8"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas8"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/buttonFalta7"
+        app:layout_constraintTop_toBottomOf="@+id/textPresenca7" />
+
+    <EditText
+        android:id="@+id/textPresenca9"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFaltas9"
+        app:layout_constraintStart_toEndOf="@+id/buttonFalta8"
+        app:layout_constraintTop_toBottomOf="@+id/textPresenca8" />
 
     <EditText
         android:id="@+id/textFaltas2"

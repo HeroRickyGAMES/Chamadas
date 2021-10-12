@@ -21,20 +21,34 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Referencias para a adição e subtração do Codigo lá no database
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference("Aluno1");
     private DatabaseReference referencia2 = FirebaseDatabase.getInstance().getReference("Aluno2");
     private DatabaseReference referencia3 = FirebaseDatabase.getInstance().getReference("Aluno3");
     private DatabaseReference referencia4 = FirebaseDatabase.getInstance().getReference("Aluno4");
     private DatabaseReference referencia5 = FirebaseDatabase.getInstance().getReference("Aluno5");
     private DatabaseReference referencia6 = FirebaseDatabase.getInstance().getReference("Aluno6");
+    private DatabaseReference referencia7 = FirebaseDatabase.getInstance().getReference("Aluno7");
+    private DatabaseReference referencia8 = FirebaseDatabase.getInstance().getReference("Aluno8");
+    private DatabaseReference referencia9 = FirebaseDatabase.getInstance().getReference("Aluno9");
+
+    //Data base
     private FirebaseDatabase database;
     private ValueEventListener valueEventListener;
+
+    //Primeiro Aluno
     private EditText presencas,faltas;
     private TextView nome;
-    private Button buttonPresenca,buttonFalta;
-    private TextView textAluno2, textAluno3, textAluno4, textAluno5, textAluno6;
-    private EditText textPresenca2, textFaltas2, textPresenca3, textFaltas3, textPresenca5, textFaltas4, textPresenca4, textFaltas5, textPresenca6, textFaltas6;
 
+    //Botões não usados
+    private Button buttonPresenca,buttonFalta;
+
+    //Referencias da Interface com o Codigo para retornar no db e na tela
+    private TextView textAluno2, textAluno3, textAluno4, textAluno5, textAluno6, textAluno7, textAluno8, textAluno9;
+    private EditText textPresenca2, textFaltas2, textPresenca3, textFaltas3, textPresenca5, textFaltas4, textPresenca4, textFaltas5, textPresenca6, textFaltas6,
+            textPresenca7, textFaltas7, textPresenca8, textFaltas8, textPresenca9, textFaltas9;
+
+    //OnCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +86,21 @@ public class MainActivity extends AppCompatActivity {
         textPresenca6 = findViewById(R.id.textPresenca6);
         textFaltas6 = findViewById(R.id.textFaltas6);
 
+        //ALUNO7
+        textAluno7 = findViewById(R.id.textAluno7);
+        textPresenca7 = findViewById(R.id.textPresenca7);
+        textFaltas7 = findViewById(R.id.textFaltas7);
+
+        //ALUNO8
+        textAluno8 = findViewById(R.id.textAluno8);
+        textPresenca8 = findViewById(R.id.textPresenca8);
+        textFaltas8 = findViewById(R.id.textFaltas8);
+
+        //ALUNO9
+        textAluno9 = findViewById(R.id.textAluno9);
+        textPresenca9 = findViewById(R.id.textPresenca9);
+        textFaltas9 = findViewById(R.id.textFaltas9);
+
             //db
         database = FirebaseDatabase.getInstance();
 
@@ -83,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
         ouvinte_4();
         ouvinte_5();
         ouvinte_6();
+        ouvinte_7();
+        ouvinte_8();
+        ouvinte_9();
 
     }
 
@@ -477,6 +509,193 @@ public class MainActivity extends AppCompatActivity {
         }if(resultadof3 > 11){
 
             textAluno6.setTextColor(Color.parseColor("#FF0000"));
+        }
+    }
+    //Ouvinte do Aluno 7
+    private void ouvinte_7(){
+        DatabaseReference reference = database.getReference().child("Aluno7");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("FIREBASE", snapshot.getValue().toString());
+
+                String name = snapshot.child("nome").getValue().toString();
+                String p4 = snapshot.child("Presenca").getValue().toString();
+                String f4 = snapshot.child("Faltas").getValue().toString();
+
+                textAluno7.setText(name);
+                textPresenca7.setText(p4);
+                textFaltas7.setText(f4);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
+            }
+        });
+
+    }
+    public void Btnpresenca7(View view){
+
+        textPresenca7.getText();
+
+        Integer campoA = Integer.parseInt(textPresenca7.getText().toString());
+        Integer campoB = Integer.valueOf(1);
+
+        int resultado2 = campoA + campoB;
+
+        textAluno7.setText(String.valueOf(resultado2));
+
+
+        referencia7.child("Presenca").setValue(resultado2);
+
+    }
+    public void faltasbtn7(View view){
+
+        textFaltas7.getText();
+        Integer campoAf = Integer.parseInt(textFaltas7.getText().toString());
+        Integer campoBf = Integer.valueOf(1);
+
+        int resultadof3 = campoAf + campoBf;
+
+        textFaltas7.setText(String.valueOf(resultadof3));
+
+        referencia7.child("Faltas").setValue(resultadof3);
+
+        if(resultadof3 > 7){
+
+            textAluno7.setTextColor(Color.parseColor("#808000"));
+
+        }if(resultadof3 > 11){
+
+            textAluno7.setTextColor(Color.parseColor("#FF0000"));
+        }
+    }
+
+    //Ouvinte do Aluno 8
+    private void ouvinte_8(){
+        DatabaseReference reference = database.getReference().child("Aluno8");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("FIREBASE", snapshot.getValue().toString());
+
+                String name = snapshot.child("nome").getValue().toString();
+                String p5 = snapshot.child("Presenca").getValue().toString();
+                String f5 = snapshot.child("Faltas").getValue().toString();
+
+                textAluno8.setText(name);
+                textPresenca8.setText(p5);
+                textFaltas8.setText(f5);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
+            }
+        });
+
+    }
+    public void Btnpresenca8(View view){
+
+        textPresenca8.getText();
+
+        Integer campoA = Integer.parseInt(textPresenca8.getText().toString());
+        Integer campoB = Integer.valueOf(1);
+
+        int resultado2 = campoA + campoB;
+
+        textAluno8.setText(String.valueOf(resultado2));
+
+
+        referencia8.child("Presenca").setValue(resultado2);
+
+    }
+    public void faltasbtn8(View view){
+
+        textFaltas8.getText();
+        Integer campoAf = Integer.parseInt(textFaltas8.getText().toString());
+        Integer campoBf = Integer.valueOf(1);
+
+        int resultadof3 = campoAf + campoBf;
+
+        textFaltas8.setText(String.valueOf(resultadof3));
+
+        referencia8.child("Faltas").setValue(resultadof3);
+
+        if(resultadof3 > 7){
+
+            textAluno8.setTextColor(Color.parseColor("#808000"));
+
+        }if(resultadof3 > 11){
+
+            textAluno8.setTextColor(Color.parseColor("#FF0000"));
+        }
+    }
+    //Ouvinte do Aluno 9
+    private void ouvinte_9(){
+        DatabaseReference reference = database.getReference().child("Aluno9");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("FIREBASE", snapshot.getValue().toString());
+
+                String name = snapshot.child("nome").getValue().toString();
+                String p5 = snapshot.child("Presenca").getValue().toString();
+                String f5 = snapshot.child("Faltas").getValue().toString();
+
+                textAluno9.setText(name);
+                textPresenca9.setText(p5);
+                textFaltas9.setText(f5);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
+            }
+        });
+
+    }
+    public void Btnpresenca9(View view){
+
+        textPresenca9.getText();
+
+        Integer campoA = Integer.parseInt(textPresenca9.getText().toString());
+        Integer campoB = Integer.valueOf(1);
+
+        int resultado2 = campoA + campoB;
+
+        textAluno9.setText(String.valueOf(resultado2));
+
+
+        referencia9.child("Presenca").setValue(resultado2);
+
+    }
+    public void faltasbtn9(View view){
+
+        textFaltas9.getText();
+        Integer campoAf = Integer.parseInt(textFaltas9.getText().toString());
+        Integer campoBf = Integer.valueOf(1);
+
+        int resultadof3 = campoAf + campoBf;
+
+        textFaltas9.setText(String.valueOf(resultadof3));
+
+        referencia9.child("Faltas").setValue(resultadof3);
+
+        if(resultadof3 > 7){
+
+            textAluno9.setTextColor(Color.parseColor("#808000"));
+
+        }if(resultadof3 > 11){
+
+            textAluno9.setTextColor(Color.parseColor("#FF0000"));
         }
     }
 
