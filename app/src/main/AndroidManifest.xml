@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chamadas">
         <activity
+            android:name=".Notas"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PrimeiraTela"
             android:exported="true"

@@ -21,4 +21,10 @@ public class PrimeiraTela extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    //Botão de Notas
+    public void BtnACNotas(View view){
+        Intent intent = new Intent(this, Notas.class);
+        startActivity(intent);
+    }
 }
