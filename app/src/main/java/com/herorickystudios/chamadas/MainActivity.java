@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String name = snapshot.child("Curso").getValue().toString();
 
-                textCurso.setText(name);
+                textCurso.setText("Curso: " + name);
             }
 
             @Override
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String name = snapshot.child("nome").getValue().toString();
 
-                textProfessor.setText(name);
+                textProfessor.setText("Professor: " + name);
             }
 
             @Override
