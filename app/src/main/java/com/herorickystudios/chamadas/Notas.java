@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -61,9 +62,15 @@ public class Notas extends AppCompatActivity {
 
                 String name = snapshot.child("nome").getValue().toString();
                 String primeirob = snapshot.child("Nota 1B").getValue().toString();
+                String segundob = snapshot.child("Nota2B").getValue().toString();
+                String terceirob = snapshot.child("Nota3B").getValue().toString();
+                String quartob = snapshot.child("Nota4B").getValue().toString();
 
                 Aluno.setText(name);
                 primeirobimestre.setText(primeirob);
+                segundobimestre.setText(segundob);
+                terceirobimestre.setText(terceirob);
+                quartobimestre.setText(quartob);
 
             }
 
@@ -72,6 +79,43 @@ public class Notas extends AppCompatActivity {
                 Log.i("FIREBASE", "Ocorreu um erro ao acessar o banco de dados da aplicação, certifique-se se está tudo certo com o codigo ou a internet" + error);
             }
         });
+    }
+
+    public void adçãodoaluno1(View view){
+        primeirobimestre.getText();
+        segundobimestre.getText();
+        terceirobimestre.getText();
+        quartobimestre.getText();
+
+        Integer campoA = Integer.parseInt(primeirobimestre.getText().toString());
+        Integer campoB = Integer.parseInt(segundobimestre.getText().toString());
+        Integer campoC = Integer.parseInt(terceirobimestre.getText().toString());
+        Integer campoD = Integer.parseInt(quartobimestre.getText().toString());
+        //Integer campoB = Integer.valueOf(1);
+
+        int primeirobim = campoA;
+        int segundobim = campoB;
+        int terceirobim = campoC;
+        int quartobim = campoD;
+        int numero = 4;
+
+        int resultado = primeirobim + segundobim + terceirobim + quartobim;
+        int resultado2 = resultado / numero;
+
+        primeirobimestre.setText(String.valueOf(primeirobim));
+        segundobimestre.setText(String.valueOf(segundobim));
+        terceirobimestre.setText(String.valueOf(terceirobim));
+        quartobimestre.setText(String.valueOf(quartobim));
+
+        Notafinal.setText(String.valueOf(resultado2));
+
+
+
+        referencia.child("NotaFinal").setValue(resultado2);
+        referencia.child("Nota 1B").setValue(primeirobim);
+        referencia.child("Nota2B").setValue(segundobim);
+        referencia.child("Nota3B").setValue(terceirobim);
+        referencia.child("Nota4B").setValue(quartobim);
     }
 
 }

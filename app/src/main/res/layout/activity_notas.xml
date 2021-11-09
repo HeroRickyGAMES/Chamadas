@@ -27,8 +27,9 @@
         android:id="@+id/Aluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="PlaceHolder"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
@@ -45,13 +46,13 @@
         android:layout_width="32dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="true"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
@@ -60,12 +61,12 @@
         android:layout_width="29dp"
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toEndOf="@+id/Nota1B"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
@@ -74,12 +75,12 @@
         android:layout_width="34dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toEndOf="@+id/Nota2B"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
@@ -88,12 +89,12 @@
         android:layout_width="34dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintStart_toEndOf="@+id/Nota3B"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
@@ -102,10 +103,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="22dp"
         android:text="N"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Nota4B"
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="66dp"
+        android:layout_height="32dp"
+        android:includeFontPadding="false"
+        android:onClick="adçãodoaluno1"
+        android:text="Enviar"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
